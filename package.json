@@ -1,21 +1,21 @@
 {
-  "name": "ip-tag",
+  "name": "npcdmod",
   "types": ["module"],
   "version": "1.4",
-  "homepage": "http://github.com/shinken-monitoring/mod-ip-tag",
+  "homepage": "http://github.com/shinken-monitoring/mod-npcdmod",
   "author": "Jean Gabès",
-  "description": "Tag host by their IP ranges",
+  "description": "Module to send host and service perfdata to a NPCD daemon for PNP",
   "contributors": [
     {
       "name": "Jean Gabès",
       "email": "naparuba@gmail.com"
     }
   ],
-  "repository": "https://github.com/shinken-monitoring/mod-ip-tag",
+  "repository": "https://github.com/shinken-monitoring/mod-npcdmod",
   "keywords": [
     "module",
-    "arbiter",
-    "ip"
+    "broker",
+    "pnp"
   ],
   "dependencies": {
     "shinken": ">=1.4"
