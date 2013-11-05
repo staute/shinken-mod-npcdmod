@@ -112,6 +112,7 @@ class Npcd_broker(BaseModule):
             print "npcdmod: I can not work with disabled performance data in shinken.cfg."
             print "npcdmod: Please enable it with 'process_performance_data=1' in shinken.cfg"
 
+
     def manage_update_program_status_brok(self, b):
         if self.process_performance_data and not b.data['process_performance_data']:
             self.process_performance_data = False
@@ -120,10 +121,12 @@ class Npcd_broker(BaseModule):
             self.process_performance_data = True
             print "npcdmod: I start processing performance data"
 
+
     # also manage initial_broks, because of the check_command (which is not part of check_result_broks)
     # save it in service_commands[host/service]
     def manage_initial_host_status_brok(self, b):
         self.host_commands[b.data['host_name']] = b.data['check_command'].call
+
 
     def manage_initial_service_status_brok(self, b):
         if not b.data['host_name'] in self.service_commands:
@@ -137,6 +140,9 @@ class Npcd_broker(BaseModule):
             self.ask_reinit(b.data['instance_id'])
             return
 
+        # Maybe there is not perfdata. If so don't even write it because npcd will drop it
+        if not b.data['perf_data']:
+            return
         line = "DATATYPE::HOSTPERFDATA\tTIMET::%d\tHOSTNAME::%s\tHOSTPERFDATA::%s\tHOSTCHECKCOMMAND::%s\tHOSTSTATE::%d\tHOSTSTATETYPE::%d\n" % (\
             b.data['last_chk'],
             b.data['host_name'],
@@ -152,6 +158,10 @@ class Npcd_broker(BaseModule):
         # If we don't know about the host or the service, ask for a full init phase!
         if not b.data['host_name'] in self.service_commands or not b.data['service_description'] in self.service_commands[b.data['host_name']]:
             self.ask_reinit(b.data['instance_id'])
+            return
+
+        # Maybe there is not perfdata. If so don't even write it because npcd will drop it
+        if not b.data['perf_data']:
             return
 
         # check if we really got the host and service data
@@ -179,6 +189,7 @@ class Npcd_broker(BaseModule):
         except:
             return False
 
+
     def rotate(self):
         target = '%s/%s.%s' % (self.perfdata_spool_dir, self.perfdata_spool_filename, int(time.time()))
         try:
@@ -191,6 +202,7 @@ class Npcd_broker(BaseModule):
             print "could not rotate perfdata_file to %s" % target
             raise
         self.processed_lines = 0
+
 
     # Wait for broks and rotate the perfdata_file in intervals of 15 seconds
     # This version does not use a signal-based timer yet. Rotation is triggered
