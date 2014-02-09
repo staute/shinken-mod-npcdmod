@@ -1,7 +1,7 @@
 {
   "name": "npcdmod",
   "types": ["module"],
-  "version": "1.4",
+  "version": "1.0",
   "homepage": "http://github.com/shinken-monitoring/mod-npcdmod",
   "author": "Jean Gabès",
   "description": "Module to send host and service perfdata to a NPCD daemon for PNP",
@@ -15,7 +15,10 @@
   "keywords": [
     "module",
     "broker",
-    "pnp"
+    "pnp",
+    "perfdata",
+    "npcdmod",
+    "NPCD"
   ],
   "dependencies": {
     "shinken": ">=1.4"
