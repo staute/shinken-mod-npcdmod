@@ -1,7 +1,7 @@
 {
   "name": "npcdmod",
   "types": ["module"],
-  "version": "1.0",
+  "version": "1.0.1",
   "homepage": "http://github.com/shinken-monitoring/mod-npcdmod",
   "author": "Jean Gabès",
   "description": "Module to send host and service perfdata to a NPCD daemon for PNP",
