@@ -1,8 +1,11 @@
 shinken-mod-npcdmod (1.0.1-1) unstable; urgency=medium
 
+  [ Thibault Cohen ]
   * New upstream version 1.0.1
   * Add replaces shinken-module-broker-npcdmod
   * Add custom config files
   * Closes: #760245
+  [ Mathieu Parent ]
+  * Architecture: all
 
- -- Thibault Cohen <thibault.cohen@savoirfairelinux.com>  Wed, 20 Aug 2014 10:56:24 -0400
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 12 Sep 2014 22:00:02 +0200
