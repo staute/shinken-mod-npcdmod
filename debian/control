@@ -11,7 +11,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-shinken/shinken-mod-npcdmod
 Homepage: http://shinken.io/package/npcdmod
 
 Package: shinken-mod-npcdmod
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}, shinken-common
 Breaks: shinken (<< 2~), shinken-common (<< 2~), shinken-core (<< 2~)
 Conflicts: shinken-module-broker-npcdmod
