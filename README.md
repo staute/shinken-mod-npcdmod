@@ -1,3 +1,4 @@
+<a href='https://travis-ci.org/shinken-monitoring/mod-npcdmod'><img src='https://api.travis-ci.org/shinken-monitoring/mod-npcdmod.svg?branch=master' alt='Travis Build'></a>
 mod-npcdmod
 ===========
 
