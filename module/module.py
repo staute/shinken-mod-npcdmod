@@ -83,7 +83,7 @@ class Npcd_broker(BaseModule):
             self.logfile = codecs.open(self.perfdata_file, 'a', 'utf-8', 'replace', 1)
         except:
             print "could not open file %s" % self.perfdata_file
-            raise Exception('could not open file %s" % self.perfdata_file')
+            raise Exception("could not open file %s" % self.perfdata_file)
         # use so we do nto ask a reinit ofan instance too quickly
         self.last_need_data_send = time.time()
 
