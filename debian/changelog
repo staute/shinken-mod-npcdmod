@@ -1,0 +1,18 @@
+shinken-mod-npcdmod (1.0.1-2) unstable; urgency=medium
+
+  [ Sebastien Coavoux ]
+  * Update packaging
+
+ -- Sebastien Coavoux <sebastien.coavoux@savoirfairelinux.com> Wed, 22 Apr 2015 10:54:27 -0400
+
+shinken-mod-npcdmod (1.0.1-1) unstable; urgency=medium
+
+  [ Thibault Cohen ]
+  * New upstream version 1.0.1
+  * Add replaces shinken-module-broker-npcdmod
+  * Add custom config files
+  * Closes: #760245
+  [ Mathieu Parent ]
+  * Architecture: all
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 12 Sep 2014 22:00:02 +0200
