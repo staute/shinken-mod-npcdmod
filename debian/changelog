@@ -1,9 +1,18 @@
+shinken-mod-npcdmod (1.0.1-2+PIC001) unstable; urgency=medium
+
+  * New upstream version
+    - Repo: https://github.com/shinken-monitoring/mod-npcdmod.git
+    - Branch: master
+    - Commit: 841f12cc220f0cf2ec92d35d3fab6fe75f26d56a
+
+ -- Stefan Taute (PLANET IC GmbH) <taute@planet-ic.de>  Wed, 28 Oct 2015 11:11:47 +0100
+
 shinken-mod-npcdmod (1.0.1-2) unstable; urgency=medium
 
   [ Sebastien Coavoux ]
   * Update packaging
 
- -- Sebastien Coavoux <sebastien.coavoux@savoirfairelinux.com> Wed, 22 Apr 2015 10:54:27 -0400
+ -- Sebastien Coavoux <sebastien.coavoux@savoirfairelinux.com>  Wed, 22 Apr 2015 10:54:27 -0400
 
 shinken-mod-npcdmod (1.0.1-1) unstable; urgency=medium
 
