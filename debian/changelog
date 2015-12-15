@@ -1,3 +1,9 @@
+shinken-mod-npcdmod (1.0.1-2+PIC002) unstable; urgency=medium
+
+  * Package pnp4nagios is now Suggests-Package and not Recommends-Package
+
+ -- Stefan Taute (PLANET IC GmbH) <taute@planet-ic.de>  Tue, 15 Dec 2015 10:09:52 +0100
+
 shinken-mod-npcdmod (1.0.1-2+PIC001) unstable; urgency=medium
 
   * New upstream version
